@@ -11,6 +11,9 @@ function App() {
       <Route path="/login" render={props => <Wrap {...props} />} />
       <Route path="/register" render={props => <Wrap {...props} />} />
       <Route path="/home" render={props => <Wrap {...props} />} />
+      <Route path="/wot" render={props => <Wrap {...props} />} />
+      <Route path="/wows" render={props => <Wrap {...props} />} />
+      <Route path="/wowp" render={props => <Wrap {...props} />} />
     </Router>
   );
 }

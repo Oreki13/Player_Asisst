@@ -1,0 +1,15 @@
+.img-wowp {
+  background-image: url("http://s1.1zoom.net/big0/330/433053-blackangel.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 500px;
+  resize: vertical;
+}
+.tex-title {
+  background: -webkit-linear-gradient(rgb(204, 204, 204), rgb(238, 255, 254));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 12;
+  text-shadow: 3px 3px 10px black;
+}
