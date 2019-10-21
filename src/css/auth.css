@@ -1,6 +1,9 @@
-/* body {
-  background-color: rgb(24, 23, 23);
-} */
+.lef {
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 20px;
+}
 /*
 
 .bodys {
@@ -24,3 +27,10 @@
 
   background-color: red;
 } */
+.Box {
+  border: 0.8px solid;
+  border-color: rgba(141, 141, 141, 0.644);
+  border-radius: 10px;
+  width: 35vmax;
+  transform: translate(30vmax, 50px);
+}

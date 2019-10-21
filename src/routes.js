@@ -1,14 +1,24 @@
 import Login from "./Views/Auth/Login";
 import Register from "./Views/Auth/Register";
+import Homes from "./Views/Home";
 
-const Routes = [
+const Auth = [
   {
-    path: "/login",
+    path: "/",
     name: "Login",
     component: Login,
-    layout: "/auth"
+    layout: "/"
   },
-  { path: "/register", name: "Register", component: Register, layout: "/auth" }
+  { path: "/register", name: "Register", component: Register, layout: "/" }
 ];
 
-export default Routes;
+const Home = [
+  {
+    path: "/home",
+    name: "Home",
+    component: Homes,
+    layout: "/home"
+  }
+];
+
+export { Auth, Home };
