@@ -51,11 +51,6 @@ class Home extends Component {
                         muted
                         controls={false}
                         onBuffer={() => this.setState({ buffer: true })}
-                        // config={{
-                        //   youtube: {
-                        //     playerVars: { disablekb: 1, showinfo: 0 }
-                        //   }
-                        // }}
                         youtubeConfig={{
                           playerVars: {
                             modestbranding: 1,
@@ -82,8 +77,6 @@ class Home extends Component {
                       <Link to={`/${list.path}`}>
                         <Button variant="primary">Go Search</Button>
                       </Link>
-                      {/* <div className="justify-content-center buton">
-                      </div> */}
                     </Card.Body>
                   </Card>
                   // <>

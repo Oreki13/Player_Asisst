@@ -1,0 +1,41 @@
+.wowp-bg {
+  background-image: url("https://wallpaperplay.com/walls/full/9/1/3/223288.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 100vh;
+  resize: vertical;
+  box-shadow: 1px 11px 25px rgb(155, 155, 155);
+}
+
+.title-wowp {
+  text-align: center;
+  border: 1px solid rgba(3, 3, 3, 0.247);
+  background-color: rgba(34, 34, 34, 0.26);
+  width: 210px;
+  color: rgb(212, 212, 212);
+  border-radius: 20px;
+  font-family: ubuntu;
+  padding: 10px;
+
+  box-shadow: 5px 4px 10px rgba(56, 16, 16, 0.384);
+}
+
+.contain {
+  font-family: Ubuntu;
+  width: 270px;
+
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.list-wowp {
+  line-height: 7px;
+  font-size: 20px;
+}
+
+.tex {
+  color: rgb(202, 201, 201);
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgb(73, 73, 73);
+}

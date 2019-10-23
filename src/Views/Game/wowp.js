@@ -11,16 +11,21 @@ import {
   Form,
   Row,
   Col,
-  Table
+  Table,
+  Card,
+  Button
 } from "react-bootstrap";
 import { connect } from "react-redux";
 import { getNameWowp } from "../../Redux/Actions/Wowp";
+import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 class Wowp extends Component {
   state = {
     country: "",
     names: [],
-    tmpName: ""
+    tmpName: "",
+    result: false
   };
   handleChange = coun => {
     this.setState({ country: coun });
@@ -31,10 +36,28 @@ class Wowp extends Component {
   };
   getName = async event => {
     if (event.key === "Enter") {
-      await this.props.dispatch(
-        getNameWowp(this.state.tmpName, this.state.country)
-      );
-      this.setState({ names: this.props.name });
+      if (this.state.tmpName.length === 0) {
+        Swal.fire({
+          position: "center",
+          type: "error",
+          title: "Field do math",
+          showConfirmButton: false,
+          timer: 1500
+        });
+      } else if (this.state.country.length === 0) {
+        Swal.fire({
+          position: "center",
+          type: "error",
+          title: "Please Select the server",
+          showConfirmButton: false,
+          timer: 1500
+        });
+      } else {
+        await this.props.dispatch(
+          getNameWowp(this.state.tmpName, this.state.country)
+        );
+        this.setState({ names: this.props.name, result: true });
+      }
     }
   };
 
@@ -52,13 +75,18 @@ class Wowp extends Component {
       },
       {
         name: "Na",
-        handel: "na"
+        handel: "com"
       },
       {
         name: "Asia",
         handel: "asia"
       }
     ];
+    const games = this.props.game.filter(
+      data => data.name !== "World of Warplanes"
+    );
+    console.log(games);
+
     return (
       <Fragment>
         <div className="img-wowp">
@@ -103,25 +131,79 @@ class Wowp extends Component {
             </div>
           </Container>
         </div>
-        <Container>
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-            </tbody>
-          </Table>
+        <Container className="mt-4">
+          {this.state.result === true && this.state.names.length > 0 ? (
+            <>
+              <h2>Result</h2>
+              <Table striped bordered>
+                <thead>
+                  <tr className="text-center">
+                    <th>UserName</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.names.map((data, key) => {
+                    return (
+                      <tr>
+                        <td>{data.nickname}</td>
+                        <td className="text-center">
+                          <Link to="/detailWowp">Detail</Link>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </Table>
+            </>
+          ) : this.state.result === true && this.state.names.length === 0 ? (
+            <>
+              <h2>Result</h2>
+              <Table striped bordered>
+                <thead>
+                  <tr className="text-center">
+                    <th>UserName</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="text-center">
+                    <td colSpan="2">Not Found</td>
+                  </tr>
+                </tbody>
+              </Table>
+            </>
+          ) : null}
+          {games.length > 0 ? (
+            <>
+              <h2>Select Another Game</h2>
+              <div className="box justify-content-center">
+                {games.map((data, key) => {
+                  return (
+                    <Card
+                      style={{ width: "18rem", margin: 10 }}
+                      className="text-center"
+                    >
+                      <Card.Img
+                        variant="top"
+                        src={data.img}
+                        className="images"
+                      />
+
+                      <Card.Body>
+                        <Card.Title className="text-center">
+                          {data.name}
+                        </Card.Title>
+                        <Link to={`/${data.path}`}>
+                          <Button variant="primary">Go Search</Button>
+                        </Link>
+                      </Card.Body>
+                    </Card>
+                  );
+                })}
+              </div>
+            </>
+          ) : null}
         </Container>
       </Fragment>
     );

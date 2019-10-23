@@ -6,6 +6,7 @@ import Home from "../Views/Home";
 import Wot from "../Views/Game/wot";
 import Wowp from "../Views/Game/wowp";
 import Wows from "../Views/Game/wows";
+import DetailWowp from "../Views/Detail/wowp";
 import firebase from "../config/firebase";
 
 class Aio extends Component {
@@ -33,7 +34,8 @@ class Aio extends Component {
         {getMatch === "/home" ? <Home game={this.state.game} /> : null}
         {getMatch === "/wot" ? <Wot /> : null}
         {getMatch === "/wows" ? <Wows /> : null}
-        {getMatch === "/wowp" ? <Wowp /> : null}
+        {getMatch === "/wowp" ? <Wowp game={this.state.game} /> : null}
+        {getMatch === "/detailWowp" ? <DetailWowp /> : null}
       </Fragment>
     );
   }

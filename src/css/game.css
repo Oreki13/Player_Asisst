@@ -14,3 +14,7 @@
   font-family: ubuntu;
   text-shadow: 1px 1px 1px #ffffff;
 }
+.box {
+  display: flex;
+  flex-wrap: wrap;
+}

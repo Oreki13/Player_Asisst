@@ -17,6 +17,7 @@ function App() {
         <Route path="/wot" render={props => <Wrap {...props} />} />
         <Route path="/wows" render={props => <Wrap {...props} />} />
         <Route path="/wowp" render={props => <Wrap {...props} />} />
+        <Route path="/detailWowp" render={props => <Wrap {...props} />} />
       </Router>
     </Provider>
   );
