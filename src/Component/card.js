@@ -5,10 +5,10 @@ const Cards = props => {
   // console.log(props.name);
 
   return (
-    <div style={{ width: "250px" }}>
+    <div style={{ width: "280px" }}>
       <Row
         style={{
-          width: "250px"
+          width: "280px"
         }}
       >
         <Col md={5}>

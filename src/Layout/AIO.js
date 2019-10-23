@@ -7,6 +7,8 @@ import Wot from "../Views/Game/wot";
 import Wowp from "../Views/Game/wowp";
 import Wows from "../Views/Game/wows";
 import DetailWowp from "../Views/Detail/wowp";
+import DetailWows from "../Views/Detail/wows";
+import DetailWot from "../Views/Detail/wot";
 import firebase from "../config/firebase";
 
 class Aio extends Component {
@@ -32,10 +34,18 @@ class Aio extends Component {
         {getMatch === "/login" ? <Login /> : null}
         {getMatch === "/register" ? <Register /> : null}
         {getMatch === "/home" ? <Home game={this.state.game} /> : null}
-        {getMatch === "/wot" ? <Wot /> : null}
-        {getMatch === "/wows" ? <Wows /> : null}
+        {getMatch === "/wot" ? <Wot game={this.state.game} /> : null}
+        {getMatch === "/wows" ? <Wows game={this.state.game} /> : null}
         {getMatch === "/wowp" ? <Wowp game={this.state.game} /> : null}
-        {getMatch === "/detailWowp" ? <DetailWowp /> : null}
+        {getMatch === "/detailWowp/:country/:id" ? (
+          <DetailWowp {...this.props} />
+        ) : null}
+        {getMatch === "/detailWot/:country/:id" ? (
+          <DetailWot {...this.props} />
+        ) : null}
+        {getMatch === "/detailWows/:country/:id" ? (
+          <DetailWows {...this.props} />
+        ) : null}
       </Fragment>
     );
   }

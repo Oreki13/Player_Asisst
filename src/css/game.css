@@ -3,7 +3,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  height: 40vh;
+  height: 50vh;
   resize: vertical;
 }
 .tex-title {
@@ -17,4 +17,21 @@
 .box {
   display: flex;
   flex-wrap: wrap;
+}
+.img-wot {
+  background-image: url("https://images6.alphacoders.com/326/326962.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 50vh;
+  resize: vertical;
+}
+
+.img-wows {
+  background-image: url("https://ryanmartinproductions.com/image/181264-full_american-cruisers-update-0-7-5-world-of-warships-worldofwarships.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 50vh;
+  resize: vertical;
 }

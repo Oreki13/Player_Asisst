@@ -23,12 +23,13 @@ import { Link } from "react-router-dom";
 class Wowp extends Component {
   state = {
     country: "",
+    nameCon: "",
     names: [],
     tmpName: "",
     result: false
   };
-  handleChange = coun => {
-    this.setState({ country: coun });
+  handleChange = (coun, alias) => {
+    this.setState({ country: coun, nameCon: alias });
   };
 
   handleInput = event => {
@@ -66,20 +67,16 @@ class Wowp extends Component {
 
     const country1 = [
       {
-        name: "Eu",
+        name: "Europe",
         handel: "eu"
       },
       {
-        name: "Ru",
+        name: "Rusia",
         handel: "ru"
       },
       {
-        name: "Na",
+        name: "Japan",
         handel: "com"
-      },
-      {
-        name: "Asia",
-        handel: "asia"
       }
     ];
     const games = this.props.game.filter(
@@ -104,7 +101,9 @@ class Wowp extends Component {
                     {country1.map((count, key) => {
                       return (
                         <Dropdown.Item
-                          onClick={() => this.handleChange(count.handel)}
+                          onClick={() =>
+                            this.handleChange(count.handel, count.name)
+                          }
                         >
                           {count.name}
                         </Dropdown.Item>
@@ -123,7 +122,7 @@ class Wowp extends Component {
                   <Form.Text className="text-white">
                     Selected Server:{" "}
                     {this.state.country.length > 0
-                      ? this.state.country
+                      ? this.state.nameCon
                       : "None"}
                   </Form.Text>
                 </Col>
@@ -148,7 +147,11 @@ class Wowp extends Component {
                       <tr>
                         <td>{data.nickname}</td>
                         <td className="text-center">
-                          <Link to="/detailWowp">Detail</Link>
+                          <Link
+                            to={`/detailWowp/${this.state.country}/${data.account_id}`}
+                          >
+                            Detail
+                          </Link>
                         </td>
                       </tr>
                     );

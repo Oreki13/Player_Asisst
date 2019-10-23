@@ -39,3 +39,59 @@
   font-weight: bold;
   text-shadow: 1px 1px 5px rgb(73, 73, 73);
 }
+
+.wot-bg {
+  background-image: url("../assets/wot.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 100vh;
+  resize: vertical;
+  box-shadow: 1px 11px 25px rgb(155, 155, 155);
+}
+
+.title-wot {
+  text-align: center;
+  border: 1px solid rgba(3, 3, 3, 0.247);
+  background-color: rgba(34, 34, 34, 0.26);
+  width: 210px;
+  color: rgb(212, 212, 212);
+  border-radius: 20px;
+  font-family: ubuntu;
+  padding: 10px;
+
+  box-shadow: 5px 4px 10px rgba(56, 16, 16, 0.384);
+}
+
+.list-wot {
+  line-height: 7px;
+  font-size: 20px;
+}
+
+.wows-bg {
+  background-image: url("https://images2.alphacoders.com/689/thumb-1920-689300.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 100vh;
+  resize: vertical;
+  box-shadow: 1px 11px 25px rgb(155, 155, 155);
+}
+
+.title-wows {
+  text-align: center;
+  border: 1px solid rgba(3, 3, 3, 0.247);
+  background-color: rgba(34, 34, 34, 0.26);
+  width: 210px;
+  color: rgb(212, 212, 212);
+  border-radius: 20px;
+  font-family: ubuntu;
+  padding: 10px;
+
+  box-shadow: 5px 4px 10px rgba(56, 16, 16, 0.384);
+}
+
+.list-wows {
+  line-height: 7px;
+  font-size: 20px;
+}
