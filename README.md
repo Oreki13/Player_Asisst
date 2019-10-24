@@ -47,19 +47,24 @@ Player Assist is a app search player info in game
 
   <p align="center">
     <span>
-      <img src="https://i.imgur.com/7gOcZiy.png" width="250px" />
+      <img src="https://i.imgur.com/7gOcZiy.png" width="500px" />
       &nbsp;&nbsp;
-      <img src="https://i.imgur.com/yVUxLLg.png" width="250px" />
+      <img src="https://i.imgur.com/yVUxLLg.png" width="500px" />
       &nbsp;&nbsp;
     </span>
   </p>
 <p align="center">
     <span>
-      <img src="https://i.imgur.com/I95uyyC.png" width="250px" />
+      <img src="https://i.imgur.com/I95uyyC.png" width="500px" />
       &nbsp;&nbsp;
-      <img src="https://i.imgur.com/AHPqd3B.png" width="250px" />
+      <img src="https://i.imgur.com/AHPqd3B.png" width="500px" />
       &nbsp;&nbsp;
-      <img src="https://i.imgur.com/ZZm75U8.png" width="250px" />
+    </span>
+  </p>
+<p align="center">
+    <span>
+      <img src="https://i.imgur.com/ZZm75U8.png" width="500px" />
+      
     </span>
   </p>
   
