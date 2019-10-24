@@ -3,7 +3,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  height: 100vh;
+  height: 90vh;
   resize: vertical;
   box-shadow: 1px 11px 25px rgb(155, 155, 155);
 }
@@ -14,7 +14,7 @@
   background-color: rgba(34, 34, 34, 0.26);
   width: 210px;
   color: rgb(212, 212, 212);
-  border-radius: 20px;
+  border-radius: 10px;
   font-family: ubuntu;
   padding: 10px;
 
@@ -35,9 +35,9 @@
 }
 
 .tex {
-  color: rgb(202, 201, 201);
+  color: rgb(255, 255, 255);
   font-weight: bold;
-  text-shadow: 1px 1px 5px rgb(73, 73, 73);
+  text-shadow: 1px 1px 5px rgb(15, 14, 14);
 }
 
 .wot-bg {
@@ -45,7 +45,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  height: 100vh;
+  height: 90vh;
   resize: vertical;
   box-shadow: 1px 11px 25px rgb(155, 155, 155);
 }
@@ -55,12 +55,12 @@
   border: 1px solid rgba(3, 3, 3, 0.247);
   background-color: rgba(34, 34, 34, 0.26);
   width: 210px;
-  color: rgb(212, 212, 212);
-  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
   font-family: ubuntu;
   padding: 10px;
 
-  box-shadow: 5px 4px 10px rgba(56, 16, 16, 0.384);
+  box-shadow: 5px 4px 10px rgba(24, 10, 10, 0.384);
 }
 
 .list-wot {
@@ -69,11 +69,11 @@
 }
 
 .wows-bg {
-  background-image: url("https://images2.alphacoders.com/689/thumb-1920-689300.jpg");
+  background-image: url("https://wallpapercave.com/wp/wp2012307.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  height: 100vh;
+  height: 90vh;
   resize: vertical;
   box-shadow: 1px 11px 25px rgb(155, 155, 155);
 }
@@ -84,7 +84,7 @@
   background-color: rgba(34, 34, 34, 0.26);
   width: 210px;
   color: rgb(212, 212, 212);
-  border-radius: 20px;
+  border-radius: 10px;
   font-family: ubuntu;
   padding: 10px;
 
@@ -94,4 +94,11 @@
 .list-wows {
   line-height: 7px;
   font-size: 20px;
+}
+
+.card-box {
+  background-color: rgba(177, 177, 177, 0.486);
+  margin-right: 50px;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }

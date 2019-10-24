@@ -152,7 +152,11 @@ class Wot extends Component {
                       <tr>
                         <td>{data.nickname}</td>
                         <td className="text-center">
-                          <Link to="/detailWot">Detail</Link>
+                          <Link
+                            to={`/detailWot/${this.state.country}/${data.account_id}`}
+                          >
+                            Detail
+                          </Link>
                         </td>
                       </tr>
                     );

@@ -28,3 +28,23 @@ export const getDetailWowp = (server, params) => {
     )
   };
 };
+
+export const getPlanes = (server, params) => {
+  return {
+    type: "GET_PLANES",
+    payload: Axios.get(
+      `https://api.worldofwarplanes.${server}/wowp/planes/stats/?application_id=9a63143440b98808ed94a3832a32cf84&account_id=${params}
+      `
+    )
+  };
+};
+export const getPlanesName = (server, plane) => {
+  return {
+    type: "GET_PLANES_NAME",
+    payload: Axios.get(
+      `
+      https://api.worldofwarplanes.${server}/wowp/encyclopedia/planeinfo/?application_id=9a63143440b98808ed94a3832a32cf84&plane_id=${plane}
+`
+    )
+  };
+};

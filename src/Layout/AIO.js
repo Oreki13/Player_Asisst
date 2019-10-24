@@ -17,6 +17,14 @@ class Aio extends Component {
     loading: true
   };
   componentDidMount = async () => {
+    const user = firebase.auth().currentUser;
+    console.log("asd", user);
+
+    firebase.auth().onAuthStateChanged(user => {
+      if (!user) {
+        this.props.history.push("/");
+      }
+    });
     const data = firebase.database().ref("game");
     data.on("value", result => {
       const list = result.val();
@@ -29,10 +37,11 @@ class Aio extends Component {
     const { loading } = this.state;
     return (
       <Fragment>
-        {getMatch === "/" ? <Header /> : null}
+        <Header />
+        {/* {getMatch === "/" ? <Login {...this.props} /> : null} */}
 
-        {getMatch === "/login" ? <Login /> : null}
-        {getMatch === "/register" ? <Register /> : null}
+        {/* {getMatch === "/login" ? <Login /> : null} */}
+
         {getMatch === "/home" ? <Home game={this.state.game} /> : null}
         {getMatch === "/wot" ? <Wot game={this.state.game} /> : null}
         {getMatch === "/wows" ? <Wows game={this.state.game} /> : null}

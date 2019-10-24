@@ -93,7 +93,7 @@ class Wows extends Component {
         <div className="img-wows">
           <Container>
             <div className="pt-4">
-              <h2 className="text-center tex-title">World of Tanks</h2>
+              <h2 className="text-center tex-title">World of WarShips</h2>
             </div>
             <div>
               <Row className="mt-5">
@@ -101,7 +101,7 @@ class Wows extends Component {
                   <DropdownButton
                     id="dropdown-item-button"
                     title="Select Server"
-                    variant="dark"
+                    variant="info"
                   >
                     {country1.map((count, key) => {
                       return (
@@ -152,7 +152,11 @@ class Wows extends Component {
                       <tr>
                         <td>{data.nickname}</td>
                         <td className="text-center">
-                          <Link to="/detailWows">Detail</Link>
+                          <Link
+                            to={`/detailWows/${this.state.country}/${data.account_id}`}
+                          >
+                            Detail
+                          </Link>
                         </td>
                       </tr>
                     );
