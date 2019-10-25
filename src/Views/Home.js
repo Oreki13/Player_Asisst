@@ -43,7 +43,7 @@ class Home extends Component {
                     style={{ width: "18rem", margin: 10 }}
                     className="text-center"
                   >
-                    {this.state.buffer ? (
+                    {!this.state.buffer ? (
                       <ReactPlayer
                         url={list.video}
                         playing
