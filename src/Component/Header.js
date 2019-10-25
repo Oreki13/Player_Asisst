@@ -10,6 +10,7 @@ import {
 } from "react-bootstrap";
 import "../css/navbar.css";
 import firebase from "../config/firebase";
+import { Link } from "react-router-dom";
 
 class Header extends Component {
   logOut = () => {
@@ -26,7 +27,9 @@ class Header extends Component {
 
     return (
       <Navbar className="bar justify-content-between" variant="dark">
-        <Navbar.Brand>Player Assist</Navbar.Brand>
+        <Link to="/">
+          <Navbar.Brand>Player Assist</Navbar.Brand>
+        </Link>
         <Navbar.Brand style={{ fontSize: 18, color: "rgb(212, 212, 212)" }}>
           {name !== null ? name.displayName : null}
         </Navbar.Brand>
